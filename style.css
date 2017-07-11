@@ -1,9 +1,15 @@
+/*@font-face {
+    font-family: ;
+    src: url(.eot); 
+    src: url(.woff) format('woff');
+    src: url(ptsans.ttf) format('truetype');
+    src: url(ptsans.svg) format('svg');
+    font-weight: normal;
+}*/
+
 body {
-   /*position: relative;*/
    margin: 0 auto; /*removes unnecessary margins*/
    width: 1366px;
-   /*overflow-x: hidden; /*removes horizontal scroll bar*/
-    
 }
 
 header {
@@ -88,10 +94,46 @@ header {
 
 .main_container {
     position: relative;
-    max-width: 100%; /*try 1366px !*/
     margin: 0 auto;
     background-color: #ef5350;
-    height: 584px;
+    min-height: 584px;
+    
+}
+
+/*.main_container:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}*/
+
+.main-text {
+    position: absolute;
+    width: 510px;
+    left: 708px;
+    top: 190px;
+    margin-bottom: 40px;
+}
+
+.caption {
+    font-size: 30px;
+    font-weight: 100;
+    font-family: Montserrat, Arial;
+    color: white;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Montserrat Light', Arial;
+    color: black;
+    margin-top: 36px;
+}
+
+button {
+    position: absolute;
+    
 }
 
 .phone_frame {
@@ -120,150 +162,166 @@ header {
 }
 
 .whiteblock {
-    /*margin: 0 auto;*/
     height: 394px;
-    /*width: 1366px;
-    max-width: 100%;*/
-    background-color: chartreuse;
+    background-color: white;
 } 
 
-.forms {
+.contact-form {
     float: right;
-    width: 48.3%;
+    background-color: white;
     height: 394px;
-    background-color: bisque;
 }
 
 form {
-    /*margin: 0 auto;*/
-    /*box-sizing: border-box;*/
-    padding: 70px 0px 90px;
-    
-    background-color: cyan
-    
+    position: relative;
+    padding-top: 0px;
+    height: 394px;
+    width: 660px; /*48.3%*/
 }
 
-.textbox {
-    /*display: block;*/
+.lets-talk {
+    position: absolute;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: 600;
+    margin: 20px 25px;
+    color: #ff8a80;
+}
+
+input {
+    position: relative;
+    top: 70px;
     font-size: 16px;
+    font-family: Arial;
+    background: transparent;
+    background: rgba (0, 0, 0, 0); /*transparent for Opera*/
+    -webkit-appearance: none; /*transparent for Chrome*/
     height: 50px;
-    width: 226px; /*250px-24px*/
+    width: 250px; /*250px-24px*/
     border: #e3f2fd 2px solid;
     border-radius: 5px;
     padding-left: 24px;
     margin-bottom: 20px;
     margin-right: 20px;
-    display: inline-block;
-    
 }
 
-.textbox select {
-    height: 50px;
-    width: 250px; /*250px-24px*/
-    font-size: 16px;
-    border: #e3f2fd 2px solid;
-    border-radius: 3px;
-    padding-left: 24px;
-    margin-bottom: 0px;
-    
-}
-
-/*form select {
-    height: 50px;
-    width: 250px; /*250px-24px*/
-   /* font-size: 16px;
-    border: #e3f2fd 2px solid;
-    border-radius: 3px;
-    padding-left: 24px;
-    margin-bottom: 0px;
-    display: inline-block;
-}
-*/
-
-
-/*
-.caption h1 {
+.button {
     position: absolute;
-    display: inline-block;
-    font-family: Arial;
-    font-size: 30pt;
-    font-weight: 100;
+    margin: 20px 0 0;
+    height: 45px;
+    width: 120px;
+    top: 317px;
+    left: 460px;
+    padding: 0; /*necessary to center*/
     text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    background: #ef5350;
     color: white;
-    top: 256px;
-    left: 710px;
-    z-index: 20;
 }
-.text {
-    position: relative;
-    left: 710px;
-    top: 395px;
-    color: white;
-    font-family: Arial;
-    font-size: 19pt;
-    font-weight: 100;
-    width: 650px;
-    text-align: justify;
+    /*Градиент кнопки SEND*/
+.button {
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); /*Chrome*/
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 }
-.greenbutton {
-  border-radius: 6px;
-  background-color: rgb(4, 228, 162);
-  position: absolute;
-  left: 1042px;
-  top: 501px;
-  width: 166px;
-  height: 54px;
+    /*color transition when hover*/
+.button:hover {
+    background-color: red;
+    -webkit-transition: All 0.5s ease;
+	-moz-transition: All 0.5s ease;
+	-o-transition: All 0.5s ease;
+	-ms-transition: All 0.5s ease;
+	transition: All 0.5s ease;
 }
-.greenbutton p {
-    position: relative;
-    top: -2px;
-    text-align: center;
-    font-family: Arial;
-    font-size: 19px;
-    color: white;      
+    /*SEND button sinks when pressed*/
+.button:active {
+    background: -moz-linear-gradient(top, #057cc0, #249ee4);
+    background: -webkit-linear-gradient(top, crimson, salmon);
+    padding-top: 22px; 
 }
 
-form {
+.select-form {
     position: absolute;
-    top: 717px;
-    left: 0px;
+    left: 302px;
+    bottom: 192px; /*192px*/
+    height: 52px;
+    width: 275px; 
+    background: url(../images/dropdown_arrow.png) no-repeat 240px;
+    border: #e3f2fd 2px solid;
+    border-radius: 5px;
 }
-*/
+
+.select-form select {
+    width: 280px;
+    height: 50px;
+    background: transparent;
+    background: rgba (0, 0, 0, 0); /*transparent for Opera*/
+    -webkit-appearance: none; /*transparent for Chrome*/
+    border: 0;
+    outline: 0;  
+    padding-left: 24px;
+    color: grey;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+textarea {
+    position: absolute;
+    width: 550px;
+    height: 80px;
+    top: 220px;
+    left: 0;
+    font-size: 16px;
+    font-family: Arial;
+    background: transparent;
+    background: rgba (0, 0, 0, 0); /*transparent for Opera*/
+    -webkit-appearance: none; /*transparent for Chrome*/
+    border: #e3f2fd 2px solid;
+    border-radius: 5px;
+    padding: 15px 0 0 24px;
+    margin-top: 0;
+}
 
 footer {
-    background-color: yellowgreen;
+    position: relative;
+    background-color: #fefcf2;
     margin-top: 0px;
     width: 100%;
     height: 73px;
    
 }
 .footer-copyright {
-    display: inline-block;
+    position: absolute;
     left: 192px;
-    top: 27px;
+    top: 23px;
     width: auto;
     font-size: 18px;
     font-family: Arial;
+    color: #6d6d6d;
 }
 .footer-email {
-    display: inline-block;
-    top:  27px;
-    width: auto;
+    position: absolute;
+    top:  23px;
+    left: 750px;
     font-size: 18px;
     font-family: Arial;
-    
+    color: 
 }
 footer a {
     text-decoration: none;
-    color: #636363;
+    color: #6d6d6d;
 }
 footer a:hover {
     color: blue;
     text-decoration: underline;
 }
 .mailicon {
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    /*display: inline-block;*/
     left: 707px;
     top: 21px;
 }
