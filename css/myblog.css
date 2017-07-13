@@ -1,0 +1,41 @@
+body {
+   margin: 0 auto; /*removes unnecessary margins*/
+   /*width: 1366px;*/
+    font-size: 20px;
+    font-family: Montserrat, Tahoma;
+}
+.wrapper {
+    background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B);
+    min-height: 585px;
+    padding-bottom: 50px;
+}
+.sidebar {
+    float: left;
+    background: pink;
+    width: 30%;
+    height: 400px;
+    margin: 40px 40px;
+}
+.content {
+    display: inline-block;
+    background: lightgreen;
+    width: 30%;
+    height: 200px;
+    margin: 40px 0;
+    padding-left: 
+}
+
+.content:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.footer {
+    background: orange;
+    padding: 10px;
+    margin: 550px 25px 0px;
+    
+}
