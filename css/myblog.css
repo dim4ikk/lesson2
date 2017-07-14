@@ -1,12 +1,17 @@
 body {
-   margin: 0 auto; /*removes unnecessary margins*/
-   /*width: 1366px;*/
+    margin: 0 auto; /*removes unnecessary margins*/
+    width: 100%;
+    max-width: 1366px;
+    height: 100%;
     font-size: 20px;
     font-family: Montserrat, Tahoma;
 }
 .wrapper {
+    margin: 0 auto;
     background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B);
-    min-height: 585px;
+    width: 100%;
+    max-width: 1366px;
+    height: auto;
     padding-bottom: 50px;
 }
 .sidebar {
@@ -14,24 +19,47 @@ body {
     background: pink;
     width: 30%;
     height: 400px;
-    margin: 40px 40px;
-}
-.content {
-    display: inline-block;
-    background: lightgreen;
-    width: 30%;
-    height: 200px;
-    margin: 40px 0;
-    padding-left: 
+    margin: 50px 0px 0px 50px;
 }
 
-.content:after {
+.contentbox {
+    display: inline-block;
+    width: 45%;
+    margin-left: 241px;
+    text-align: justify;
+}
+
+.content {
+    /*display: inline-block;*/
+    position: relative;
+    background: lightgreen;
+    margin: 50px 0;
+    min-height: 270px;
+    padding: 25px 25px 85px;
+    border-radius: 10px;
+}
+
+.content img {
+    float: left;
+    margin: 0px 25px 25px 0px;
+    border-radius: 10px;
+}
+
+.content button {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    height: 45px;
+    
+}
+
+/*.contentbox:after {
     content: ".";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden;
-}
+}*/
 
 .footer {
     background: orange;

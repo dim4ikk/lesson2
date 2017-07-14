@@ -3,6 +3,9 @@ header {
     height: 78px;
     /*background-color: #e94643;*/
     background-image: -webkit-linear-gradient(150deg, #7c1817, #e94643);
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
 }
 
 .container {
