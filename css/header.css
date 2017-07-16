@@ -1,20 +1,18 @@
 header {
     border-top: 23px solid #04e4a2; /*green line at the top*/
-    height: 78px;
-    /*background-color: #e94643;*/
+    line-height: 78px;
     background-image: -webkit-linear-gradient(150deg, #7c1817, #e94643);
-    width: 100%;
-    max-width: 1366px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
 .container {
-    line-height: 78px;/*height of header*/
+    
 }
 
 .logo {
     display: inline-block;
-    margin-left: 230px;
+    margin-left: 50px;
 }
 
 .container img {
@@ -49,7 +47,10 @@ header {
     text-decoration: none;
     padding-bottom: 5px; /*space for underline*/
     margin-left: 30px;
-    right: 95px;
+}
+
+.navigation a:last-child {
+    margin-right: 50px;
 }
 
 /*underline effect when hover*/
