@@ -1,10 +1,10 @@
 body {
     margin: 0 auto; /*removes unnecessary margins*/
+    max-width: 1024px;
+   
 }
 .wrapper {
     margin: 0 auto;
-    
-    max-width: 1024px;
     height: auto;
     padding-bottom: 50px;
     background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B);
@@ -12,19 +12,23 @@ body {
 .sidebar {
     float: left;
     background: pink;
-    /*width: 30%;*/
-    min-width: 400px;
+    width: 40%;
+    min-width: 390px;
     height: 500px;
     margin: 50px 0px 0px 30px;
     border-radius: 10px;
+    box-shadow: 0.3em 0.3em 1.01em green;
 }
 
 form[name="search"] {
     padding: 30px;
+    max-width: 100%;
+    width: 340px;
 }
 
 input[name="q"] {
     width: 210px;
+    max-width: 60%;
     height: 49px;
     font-family: Montserrat, Arial;
     font-size: 18px;
@@ -42,7 +46,6 @@ form button {
     background: #04e4a2;
     color: white;
     border-radius: 10px;
-    
 }
 
 form button:hover {
@@ -54,16 +57,15 @@ form button:hover {
 }
 
 .aside-menu {
-    border-width: thin;
-    border-color: black;
+    box-sizing: border-box;
+    list-style-type: square; /*type of marker for li*/
 }
 .aside-menu li {
     font-family: Montserrat, Arial;
     font-size: 22px;
     text-shadow: 0.1em 0.1em 0.05em green;
-	list-style-type: square; /*type of marker for li*/
-	border-bottom: 1px solid #e94643;
-    padding: 10px;
+	border-bottom: px solid #e94643;
+    padding: 10px 10px 10px 10px;
 }
 
 .aside-menu li:hover {
@@ -92,10 +94,16 @@ form button:hover {
 }
 
 .contentbox {
+    clear: both;
+}
+
+.contentbox {
     display: inline-block;
-    width: 45%;
-    margin-left: 88px;
+    width: 48%;
+    min-width: 480px;
+    margin-left: 55px;
     margin-right: 30px;
+    margin-bottom: 50px;
     text-align: justify;
 }
 
@@ -110,33 +118,32 @@ form button:hover {
     min-height: 270px;
     padding: 25px 25px 85px;
     border-radius: 10px;
+    box-shadow: 0.3em 0.3em 1.01em green;
 }
 
 .content img {
     float: left;
     margin: 0px 25px 25px 0px;
     border-radius: 10px;
+    box-shadow: 0.3em 0.3em 1.01em green;
 }
 
 .content button {
     position: absolute;
+    background-color: #ed672b;
     right: 25px;
     bottom: 25px;
     height: 45px;
-    
+    font-family: Montserrat, Arial;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
 }
 
-/*.contentbox:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}*/
-
-.footer {
-    background: orange;
-    padding: 10px;
-    margin: 550px 25px 0px;
-    
+.content button:hover {
+    background-color: #e8a11a;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    cursor: pointer; /*"hand" cursor for <button> tag*/
 }

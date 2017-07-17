@@ -14,7 +14,7 @@ body {
     float: left;
     margin-left: 50px;
     margin-top: 50px;
-    width: 37%;
+    max-width: 37%;
 }
 
 .right-wrap {
@@ -32,7 +32,7 @@ body {
 }
 
 .main-text {
-    width: 510px;
+    max-width: 510px;
 }
 
 .caption {
@@ -214,36 +214,11 @@ textarea {
     padding-top: 22px; 
 }
 
-footer {
-    position: relative;
-    background-color: #1a1a19;
-    width: 100%;
-    line-height: 78px;
-}
-.footer-copyright {
-    display: inline-block;
-    margin-left: 50px;
-    font-size: 18px;
-    font-family: Montserrat, Arial;
-    color: #6d6d6d;
-}
-.footer-email {
-    display: inline-block;
-    float: right;
-    margin-right: 50px;
-    font-size: 18px;
-    font-family: Montserrat, Arial;
-}
-footer a {
-    text-decoration: none;
-    color: #6d6d6d;
-}
-footer a:hover {
-    color: #d3d3e5;
-    text-decoration: underline;
-}
-.mailicon {
-    display: inline-block;
-    float: right;
-    margin: 9px 20px 0 0;
+@media screen and (max-width: 1000px) and (min-width: 100px){
+    .main_container {
+        background: radial-gradient(circle farthest-corner at 100px 50px, #db6a12, #8623bc);
+    }
+    .caption {
+        color: yellow;
+    }
 }
